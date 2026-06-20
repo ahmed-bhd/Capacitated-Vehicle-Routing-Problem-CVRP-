@@ -1,0 +1,5 @@
+# Scenario: Compare performance with different capacity limits
+experiment_name: "capacity_sensitivity_test"
+overrides:
+  default_vehicle_capacity: 150
+  time_limit_seconds: 60

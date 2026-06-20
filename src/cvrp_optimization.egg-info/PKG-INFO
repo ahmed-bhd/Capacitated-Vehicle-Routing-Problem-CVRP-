@@ -1,3 +1,19 @@
+Metadata-Version: 2.4
+Name: cvrp_optimization
+Version: 0.1.0
+Summary: A real-world Capacitated Vehicle Routing Problem (CVRP) optimization tool
+Author: Ahmed Baahmed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ortools>=9.0
+Requires-Dist: requests
+Requires-Dist: folium
+Requires-Dist: pandas
+Requires-Dist: pyyaml
+Requires-Dist: click
+Dynamic: license-file
+
 We will now proceed to **[P0-04] README.md**. This file is the "front door" of your project. It provides a high-level overview, helping other developers or logistics planners understand the value and usage of the tool immediately.
 
 ### [P0-04] README.md

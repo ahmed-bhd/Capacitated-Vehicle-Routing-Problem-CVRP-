@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cvrp_optimization"
+version = "0.1.0"
+authors = [
+  { name = "Ahmed Baahmed" },
+]
+description = "A real-world Capacitated Vehicle Routing Problem (CVRP) optimization tool"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "ortools>=9.0",
+    "requests",
+    "folium",
+    "pandas",
+    "pyyaml",
+    "click",
+]
+
+[project.scripts]
+cvrp-solve = "cvrp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["cvrp*"]

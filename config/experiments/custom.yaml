@@ -1,0 +1,14 @@
+# Scenario: High-density urban delivery with strict time windows
+experiment_name: "urban_tight_delivery"
+
+# Override base settings
+overrides:
+  default_vehicle_capacity: 50     # Smaller vehicle for narrow streets
+  max_route_duration: 1800         # Stricter time limit (30 mins)
+  time_limit_seconds: 120          # More computation time to find better paths
+  
+# Custom scenario-specific parameters
+enable_heterogeneous_fleet: true
+vehicle_types:
+  small_van: {count: 5, capacity: 50}
+  large_truck: {count: 2, capacity: 200}

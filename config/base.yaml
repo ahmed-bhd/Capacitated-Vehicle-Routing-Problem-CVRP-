@@ -1,0 +1,13 @@
+# Global settings for the CVRP instance
+project_name: "Urban Logistics Optimization"
+version: "1.0"
+
+# OSRM Server connection
+osrm_url: ${OSRM_URL:-http://router.project-osrm.org}
+
+# Default constraints
+default_vehicle_capacity: 100
+max_route_duration: 3600 # in seconds (e.g., 1 hour shift)
+
+# Global solver constraints
+time_limit_seconds: 30

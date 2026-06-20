@@ -1,0 +1,3 @@
+# Default input parameters
+depot_location: {"lat": 36.5, "lon": 3.7}
+input_data_path: "data/raw/customers_001.csv"

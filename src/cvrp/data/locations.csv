@@ -1,0 +1,13 @@
+node_id,name,demand,latitude,longitude
+0,Berlin,0,52.52,13.405
+1,Hamburg,25,53.5511,9.9937
+2,Munich,30,48.1351,11.582
+3,Frankfurt,20,50.1109,8.6821
+4,Stuttgart,25,48.7758,9.1829
+5,Düsseldorf,20,51.2277,6.7735
+6,Leipzig,15,51.3397,12.3731
+7,Dortmund,25,51.5136,7.4653
+8,Essen,20,51.4556,7.0116
+9,Bremen,30,53.0793,8.8017
+10,Dresden,15,51.0504,13.7373
+11,Hanover,20,52.3759,9.732
