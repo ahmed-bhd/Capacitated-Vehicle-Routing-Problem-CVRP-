@@ -1,6 +1,3 @@
-We will now proceed to **[P0-04] README.md**. This file is the "front door" of your project. It provides a high-level overview, helping other developers or logistics planners understand the value and usage of the tool immediately.
-
-### [P0-04] README.md
 
 ```markdown
 # CVRP Optimization Project
