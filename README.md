@@ -77,15 +77,65 @@ python -m cvrp.cli
 ### 8. Project Structure
 
 ```text
-CVRP/
-├── src/
-│   ├── cvrp/
-│   │   ├── data/              # Input CSV files
-│   │   ├── distance/          # Matrix building logic
-│   │   ├── routing/           # Solver & statistics logic
-│   │   └── visualization/     # Map generation
-│   └── cli.py                 # Main entry point
-├── output/                    # Generated maps and reports
-└── README.md
+cvrp_optimization_project/
+├── .gitignore                    
+├── Makefile                     
+├── pyproject.toml                
+├── README.md                     
+├── LICENSE                       
+├── .env.example                  
+
+├── config/
+│   ├── base.yaml                 # Primary configuration
+│   ├── logging.yaml              # Logging setup
+│   ├── defaults/                 # solver.yaml, data.yaml
+│   └── experiments/              # baseline.yaml, custom.yaml
+
+├── docs/
+│   ├── index.md                  # Reading guide
+│   ├── problem.md                # Objectives, constraints, assumptions
+│   ├── data.md                   # Dictionary & sources
+│   └── model.md                  # Math formulation & notation
+
+├── src/cvrp/
+│   ├── __init__.py               # Package marker
+│   ├── core/
+│   │   ├── type_aliases.py       # Custom types
+│   │   └── exceptions.py         # Error handling
+│   ├── data/
+│   │   ├── input_parser.py       # Data ingestion
+│   │   ├── validator.py          # Feasibility checks
+│   │   └── instance_generator.py # Synthetic data
+│   ├── distance/
+│   │   ├── fallback_euclidean.py # Basic logic
+│   │   ├── osrm_client.py        # API client
+│   │   └── matrix_builder.py     # Orchestrator
+│   ├── solvers/
+│   │   ├── distance_callback.py  # Arc costs
+│   │   ├── demand_callback.py    # Node demands
+│   │   ├── capacity_dimension.py # Constraints
+│   │   ├── search_parameters.py  # Strategy configs
+│   │   └── ortools_interface.py  # Main solver
+│   ├── routing/
+│   │   ├── solution_extractor.py # Response parsing
+│   │   ├── route_statistics.py   # Metrics
+│   │   └── load_utilization.py   # Capacity analysis
+│   ├── visualization/
+│   │   ├── color_palette.py      # Styling
+│   │   ├── route_polylines.py    # Polyline builder
+│   │   └── folium_map.py         # Map engine
+│   ├── reports/
+│   │   ├── fleet_statistics.py   # Aggregation
+│   │   └── summary_report.py     # Output formatting
+│   └── cli.py                    # Entry point
+
+├── data/
+│   ├── raw/                      # Input storage
+│   └── instances/                # Small/Medium/Large test cases
+
+├── tests/
+   ├── conftest.py               # Shared fixtures
+   ├── unit/                     # Test files mirroring src/cvrp/ modules
+   └── integration/              # End-to-end testing
 
 ```
